@@ -1,6 +1,7 @@
 # Course-Title-Generation-Project
 
 Objective :
+
 This project aims to utilize Deep Learning and LLM techniques and algorithms, to 
 solve the problem of generating courses titles from courses skills, by automating the 
 process.
@@ -11,6 +12,7 @@ accurate and relevant titles for unseen course skills
 
 
 Data :
+
 We use this dataset: https://www.kaggle.com/datasets/azraimohamad/coursera-course-data
 The dataset file contains Title, Organization, Skills, Ratings, Review and Metadata. 
 The dataset used for training and evaluation consists of course skills along with their 
@@ -27,7 +29,7 @@ two distinct segments, with the course skills segment enclosed within [Skills] m
 and the course title presented without tags.
 
 
-File Descriptions and Functionality 
+File Descriptions and Functionality :
 - Project_seq2seq.py: This file contains the code to train the model and evaluate 
 it. It defines the trainer, trainer arguments, tokenizer, and other things that 
 related to the training and evaluation process.
