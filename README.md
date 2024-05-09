@@ -35,7 +35,7 @@ and the course title presented without tags.
 The T5 model architecture (T5ForConditionalGeneration) and its tokenizer 
 (T5Tokenizer) are employed for this task. Both are initialized from the 't5-base' pre-trained checkpoint.
 T5-base is a transformer-based language model capable of generating coherent and 
-contextually relevant text. The model is initialized with pre-trained weights and finetuned on the specific task of course title generation.
+contextually relevant text. The model is initialized with pre-trained weights and fine-tuned on the specific task of course title generation.
 The model is fine-tuned using the Seq2SeqTrainer with specified training arguments 
 (Seq2SeqTrainingArguments).
 Training is conducted over multiple epochs, with logging and evaluation at defined 
