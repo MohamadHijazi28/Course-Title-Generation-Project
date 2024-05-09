@@ -1,6 +1,6 @@
 # Course-Title-Generation-Project
 
-Objective :
+# Objective :
 
 This project aims to utilize Deep Learning and LLM techniques and algorithms, to 
 solve the problem of generating courses titles from courses skills, by automating the 
@@ -11,9 +11,9 @@ the relationship between course skills and their corresponding titles and genera
 accurate and relevant titles for unseen course skills 
 
 
-Data :
+# Data :
 
-We use this dataset: https://www.kaggle.com/datasets/azraimohamad/coursera-course-data
+- We use this dataset: https://www.kaggle.com/datasets/azraimohamad/coursera-course-data
 The dataset file contains Title, Organization, Skills, Ratings, Review and Metadata. 
 The dataset used for training and evaluation consists of course skills along with their 
 corresponding titles. In addition, its split into a training set and a test set, with 80% of 
@@ -29,7 +29,24 @@ two distinct segments, with the course skills segment enclosed within [Skills] m
 and the course title presented without tags.
 
 
-File Descriptions and Functionality :
+# Architecture :
+
+The T5 model architecture (T5ForConditionalGeneration) and its tokenizer 
+(T5Tokenizer) are employed for this task. Both are initialized from the 't5-base' pretrained checkpoint.
+T5-base is a transformer-based language model capable of generating coherent and 
+contextually relevant text. The model is initialized with pre-trained weights and finetuned on the specific task of course title generation.
+The model is fine-tuned using the Seq2SeqTrainer with specified training arguments 
+(Seq2SeqTrainingArguments).
+Training is conducted over multiple epochs, with logging and evaluation at defined 
+intervals.
+During training, the model is trained using teacher forcing, where the ground truth 
+title is provided along with the skills input. This approach allows the model to learn 
+the next token based on the previous ground truth tokens.
+Also, we define Data Collator to ensure proper tokenization and batching of the input 
+data during training.
+
+
+# File Descriptions and Functionality :
 - Project_seq2seq.py: This file contains the code to train the model and evaluate 
 it. It defines the trainer, trainer arguments, tokenizer, and other things that 
 related to the training and evaluation process.
