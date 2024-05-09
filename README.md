@@ -14,6 +14,7 @@ accurate and relevant titles for unseen course skills
 # Data :
 
 - We use this dataset: https://www.kaggle.com/datasets/azraimohamad/coursera-course-data
+
 The dataset file contains Title, Organization, Skills, Ratings, Review and Metadata. 
 The dataset used for training and evaluation consists of course skills along with their 
 corresponding titles. In addition, its split into a training set and a test set, with 80% of 
@@ -32,7 +33,7 @@ and the course title presented without tags.
 # Architecture :
 
 The T5 model architecture (T5ForConditionalGeneration) and its tokenizer 
-(T5Tokenizer) are employed for this task. Both are initialized from the 't5-base' pretrained checkpoint.
+(T5Tokenizer) are employed for this task. Both are initialized from the 't5-base' pre-trained checkpoint.
 T5-base is a transformer-based language model capable of generating coherent and 
 contextually relevant text. The model is initialized with pre-trained weights and finetuned on the specific task of course title generation.
 The model is fine-tuned using the Seq2SeqTrainer with specified training arguments 
